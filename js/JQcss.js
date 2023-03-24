@@ -40,3 +40,18 @@ $("#todo input[type='checkbox']").on("click", function(e) {
         $("#todo").css("color","").removeClass("checked");
     }
 })
+
+// 자바스크립트를 이용하여 버튼에 이벤트 넣기
+const btns = document.querySelectorAll("#number-btns button");
+for(let i=0; i<btns.length;i++) {
+    btns[i].addEventListener("click", function(e){
+        e.target.style.color = "red";
+        e.target.disabled = "true";
+    })
+}
+// 제이쿼리로 접근한 여러개의 태그는 
+// 배열로 처리하지않고 바로 메소드를 이용해 모두 적용할 수 있다
+console.log($("#number-btns button"))
+$("#number-btns button").css({
+    "color" :"blue"
+})
