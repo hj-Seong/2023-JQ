@@ -124,7 +124,13 @@
         console.log($("#list").children().eq(1)); // 인덱스1, <li>두번째</li>
         console.log($("#list").children().filter(":eq(2)"));// 인덱스2, <li>세번째</li>
 
-
+        // 제이쿼리를 이용한 요소 접근 실습
+        $("#list2").children().first().text("list시작");
+        $("#list2").children().eq(1).text("제이쿼리를 이용하여 값을 바꿨습니다");
+        // filter에 작성된 css선택자는 현재 children중에서 찾는다
+        // :nth-child(3) 이대로 사용하면 
+        // 현재 자식 중에 태그/클래스 상관없이 3번째 자식을 찾는다
+        $("#list2").children().filter(":nth-child(3)").text("세번째 li태그입니다")
     </script>
 </body>
 </html>
